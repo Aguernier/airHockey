@@ -17,230 +17,125 @@ namespace Aguernier
 
     void SevenSegments::displayNomber(int number)
     {
+        int on, off;
         if (m_type == 0) {
-            switch (number) {
-                case 0:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, LOW);
-                break;
-
-                case 1:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
-
-                case 2:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case 3:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case 4:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case 5:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case 6:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case 7:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
-
-                case 8:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case 9:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
-
-                case -1:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
-            }
+            on = HIGH;
+            off = LOW;
         } else {
-            switch (number) {
-                case 0:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, HIGH);
-                break;
+            on = LOW;
+            off = HIGH;
+        }
 
-                case 1:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
+        switch (number) {
+            case 0:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, on);
+            digitalWrite(m_F, on);
+            digitalWrite(m_G, off);
+            break;
 
-                case 2:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, LOW);
-                break;
+            case 1:
+            digitalWrite(m_A, off);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, off);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, off);
+            digitalWrite(m_G, off);
+            break;
 
-                case 3:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, LOW);
-                break;
+            case 2:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, off);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, on);
+            digitalWrite(m_F, off);
+            digitalWrite(m_G, on);
+            break;
 
-                case 4:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
+            case 3:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, off);
+            digitalWrite(m_G, on);
+            break;
 
-                case 5:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
+            case 4:
+            digitalWrite(m_A, off);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, off);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, on);
+            digitalWrite(m_G, on);
+            break;
 
-                case 6:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
+            case 5:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, off);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, on);
+            digitalWrite(m_G, on);
+            break;
 
-                case 7:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
+            case 6:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, off);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, on);
+            digitalWrite(m_F, on);
+            digitalWrite(m_G, on);
+            break;
 
-                case 8:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, LOW);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
+            case 7:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, off);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, off);
+            digitalWrite(m_G, off);
+            break;
 
-                case 9:
-                digitalWrite(m_A, LOW);
-                digitalWrite(m_B, LOW);
-                digitalWrite(m_C, LOW);
-                digitalWrite(m_D, LOW);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, LOW);
-                digitalWrite(m_G, LOW);
-                break;
+            case 8:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, on);
+            digitalWrite(m_F, on);
+            digitalWrite(m_G, on);
+            break;
 
-                case -1:
-                digitalWrite(m_A, HIGH);
-                digitalWrite(m_B, HIGH);
-                digitalWrite(m_C, HIGH);
-                digitalWrite(m_D, HIGH);
-                digitalWrite(m_E, HIGH);
-                digitalWrite(m_F, HIGH);
-                digitalWrite(m_G, HIGH);
-                break;
-            }
+            case 9:
+            digitalWrite(m_A, on);
+            digitalWrite(m_B, on);
+            digitalWrite(m_C, on);
+            digitalWrite(m_D, on);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, on);
+            digitalWrite(m_G, on);
+            break;
+
+            case -1:
+            digitalWrite(m_A, off);
+            digitalWrite(m_B, off);
+            digitalWrite(m_C, off);
+            digitalWrite(m_D, off);
+            digitalWrite(m_E, off);
+            digitalWrite(m_F, off);
+            digitalWrite(m_G, off);
+            break;
         }
     }
 }
