@@ -44,6 +44,28 @@ namespace Aguernier
             m_push = false;
         }
     }
+
+    bool Player::scored()
+    {
+        if (digitalRead(m_sensor) == 1) {
+            m_push = true;
+            return false;
+        }
+        if (m_push == true && digitalRead(m_sensor) == 0) {
+            addScore();
+            m_push = false;
+            return true;
+        }
+        return false;
+    }
+
+    int Player::diffScore(int score1, int score2) 
+    {
+        /* if (score2 > score1) {
+            return score2 - score1;
+        } */
+        return score1 - score2;
+    }
 }
 
 
